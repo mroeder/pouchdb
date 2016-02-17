@@ -540,7 +540,7 @@ function updateViewInQueue(view) {
         var docIdsToChangesAndEmits = {};
         for (var i = 0, l = results.length; i < l; i++) {
           var change = results[i];
-          if (change.doc._id[0] !== '_') {
+          // if (change.doc._id[0] !== '_') {
             mapResults = [];
             doc = change.doc;
 
@@ -565,7 +565,7 @@ function updateViewInQueue(view) {
               indexableKeysToKeyValues: indexableKeysToKeyValues,
               changes: change.changes
             };
-          }
+          // }
           currentSeq = change.seq;
         }
         queue.add(processChange(docIdsToChangesAndEmits, currentSeq));
